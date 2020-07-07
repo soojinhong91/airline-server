@@ -24,17 +24,17 @@ class FlightsController < ApplicationController
   # POST /flights
   # POST /flights.json
   def create
-    @flight = Flight.create(flight_params)
+    @flight = Flight.new(flight_params)
 
-    # respond_to do |format|
-    #   if @flight.save
-    #     format.html { redirect_to @flight, notice: 'Flight was successfully created.' }
-    #     format.json { render :show, status: :created, location: @flight }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @flight.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      if @flight.save
+        format.html { redirect_to @flight, notice: 'Flight was successfully created.' }
+        format.json { render :show, status: :created, location: @flight }
+      else
+        format.html { render :new }
+        format.json { render json: @flight.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /flights/1
