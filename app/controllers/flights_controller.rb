@@ -21,6 +21,11 @@ class FlightsController < ApplicationController
   def edit
   end
 
+  def search #searching where the params are equal to the link params the user has inputted. 
+    @flights = Flight.where(from: params[:from].upcase, to: params[:to].upcase)
+    render :json => @flights
+  end
+
   # POST /flights
   # POST /flights.json
   def create
