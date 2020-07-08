@@ -25,3 +25,7 @@ Reservation.destroy_all
 r1 = Reservation.create :reservation_number => 'AAA'
 r2 = Reservation.create :reservation_number => '111'
 puts "#{ Reservation.count } Reservations"
+
+puts "Flights and users"
+f1.users << u1
+f2.users << u2

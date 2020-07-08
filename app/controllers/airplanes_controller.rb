@@ -49,10 +49,10 @@ class AirplanesController < ApplicationController
         format.json { render json: @airplane.errors, status: :unprocessable_entity }
       end
     end
-  end 
+  end
 
   def search
-    @flight = Flight.find params[:id]
+    @flight = Flight.find params[:flight_id]
   end
 
   # DELETE /airplanes/1
