@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Airplane.destroy_all
-a1 = Airplane.create :name => 'Yoni', :rows => 'A', :columns => 1
-a2 = Airplane.create :name => 'Soojin', :rows => 'B', :columns => 2
+a1 = Airplane.create :name => 'QA75', :rows => 'A', :columns => 1
+a2 = Airplane.create :name => 'MH370', :rows => 'B', :columns => 2
 puts "#{ Airplane.count } Airplanes"
 
 User.destroy_all

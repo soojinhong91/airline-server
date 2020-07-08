@@ -51,6 +51,10 @@ class AirplanesController < ApplicationController
     end
   end
 
+  def search
+    @flight = Flight.find params[:id]
+  end
+
   # DELETE /airplanes/1
   # DELETE /airplanes/1.json
   def destroy

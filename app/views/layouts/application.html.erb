@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Planes", "/airplanes"%></li>
+        <li><%= link_to "Flights", "/flights"%></li>
+        <li><%= link_to "Search", "/search"%></li>
+        <li><%= link_to "Admin", "/users"%></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
