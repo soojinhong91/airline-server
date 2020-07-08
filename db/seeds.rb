@@ -7,21 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Airplane.destroy_all
-a1 = Airplane.create :name => '747', :rows => 4, :columns => 4
-a2 = Airplane.create :name => '757', :rows => 4, :columns => 4
+a1 = Airplane.create :name => '747', :rows => 4, :columns => 5
+a2 = Airplane.create :name => '757', :rows => 4, :columns => 5
 puts "#{ Airplane.count } Airplanes"
 
 User.destroy_all
 u1 = User.create :name => 'Yoni', :email => 'jonesy@ga.co', :password => 'chicken'
 u2 = User.create :name => 'Soojin', :email => 'craigsy@ga.co', :password => 'chicken'
+u2 = User.create :name => 'Aleks', :email => 'aleks@ga.co', :password => 'chicken'
 puts "#{ User.count } Users"
 
 Flight.destroy_all
 f1 = Flight.create :date =>'2020-11-21', :flight_number => '23', :from => 'JFK', :to =>'SFO', :plane_type => 757
-f2 = Flight.create :date =>'2020-12-21', :flight_number => '412', :from => 'JFK', :to =>'SFO', :plane_type => 757
+f2 = Flight.create :date =>'2020-12-21', :flight_number => '12', :from => 'JFK', :to =>'SFO', :plane_type => 757
+f2 = Flight.create :date =>'2020-12-21', :flight_number => '412', :from => 'SYD', :to =>'BRS', :plane_type => 757
+f2 = Flight.create :date =>'2020-12-21', :flight_number => '555', :from => 'MELB', :to =>'MELB', :plane_type => 757
+f2 = Flight.create :date =>'2020-12-21', :flight_number => 'MH370', :from => 'KUL', :to =>'IOC', :plane_type => 757
+f2 = Flight.create :date =>'2020-12-21', :flight_number => '666', :from => 'SFO', :to =>'JFK', :plane_type => 757
 puts "#{ Flight.count } Flights"
 
 Reservation.destroy_all
+r1 = Reservation.create :reservation_number => 'AAA'
+r1 = Reservation.create :reservation_number => 'AAA'
 r1 = Reservation.create :reservation_number => 'AAA'
 r2 = Reservation.create :reservation_number => '111'
 puts "#{ Reservation.count } Reservations"
