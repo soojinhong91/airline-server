@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Airplane.destroy_all
-a1 = Airplane.create :name => 'QA75', :rows => 'A', :columns => 1
-a2 = Airplane.create :name => 'MH370', :rows => 'B', :columns => 2
+a1 = Airplane.create :name => '747', :rows => 4, :columns => 4
+a2 = Airplane.create :name => '757', :rows => 4, :columns => 4
 puts "#{ Airplane.count } Airplanes"
 
 User.destroy_all
@@ -25,7 +25,3 @@ Reservation.destroy_all
 r1 = Reservation.create :reservation_number => 'AAA'
 r2 = Reservation.create :reservation_number => '111'
 puts "#{ Reservation.count } Reservations"
-
-puts "Flights and users"
-f1.users << u1
-f2.users << u2
